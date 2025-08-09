@@ -1,0 +1,3 @@
+/workspace/media-core/build/CMakeFiles/media_core.dir
+/workspace/media-core/build/CMakeFiles/edit_cache.dir
+/workspace/media-core/build/CMakeFiles/rebuild_cache.dir
