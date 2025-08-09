@@ -24,7 +24,7 @@ func RegisterRoutes(r *chi.Mux, logger *zap.Logger, cfg config.Config) {
 		logger: logger,
 		cfg:    cfg,
 		reg:    registrar.NewInMemory(),
-		mcClient: mediacore.NewStubClient(),
+		mcClient: func() mediacore.Client { c, _ := mediacore.NewClientFromConfig(cfg); return c }(),
 	}
 
 	r.Get("/healthz", func(w http.ResponseWriter, _ *http.Request) {

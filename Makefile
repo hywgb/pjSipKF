@@ -1,4 +1,4 @@
-.PHONY: all tidy build test run
+.PHONY: all tidy build test run docker-build docker-up docker-down
 
 all: tidy build test
 
@@ -17,3 +17,12 @@ MOD_DIR=control-plane
 
  run:
 	cd $(MOD_DIR) && go run ./cmd/api
+
+ docker-build:
+	docker compose build
+
+ docker-up:
+	docker compose up -d
+
+ docker-down:
+	docker compose down

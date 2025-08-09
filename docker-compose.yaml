@@ -1,0 +1,21 @@
+services:
+  control-plane:
+    build: ./control-plane
+    image: pjSipKF/control-plane:dev
+    environment:
+      - HTTP_LISTEN=:8080
+      - LOG_LEVEL=info
+      - MEDIA_CORE_UDS=/var/run/mediacore.sock
+    volumes:
+      - mediacore-uds:/var/run
+    ports:
+      - "8080:8080"
+    depends_on:
+      - media-core
+  media-core:
+    image: debian:12-slim
+    command: ["bash", "-lc", "apt-get update && apt-get install -y socat && rm -rf /var/lib/apt/lists/* && socat UNIX-LISTEN:/var/run/mediacore.sock,fork -"]
+    volumes:
+      - mediacore-uds:/var/run
+volumes:
+  mediacore-uds: {}
