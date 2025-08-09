@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package mediacore.v1;
 
-option go_package = "github.com/hywgb/pjSipKF/proto/gen/go/mediacore/v1;mediacorev1";
+option go_package = "github.com/hywgb/pjSipKF/proto/mediacore/v1;mediacorev1";
 
 service MediaCore {
   rpc CreateSession (CreateSessionRequest) returns (CreateSessionResponse);

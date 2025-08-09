@@ -12,7 +12,7 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/grpc/test/bufconn"
 
-	mediacorev1 "github.com/hywgb/pjSipKF/proto/gen/go/mediacore/v1"
+	mediacorev1 "github.com/hywgb/pjSipKF/proto/mediacore/v1"
 )
 
 type grpcClient struct {

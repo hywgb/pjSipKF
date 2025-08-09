@@ -340,7 +340,7 @@ const file_mediacore_session_proto_rawDesc = "" +
 	"\tMediaCore\x12X\n" +
 	"\rCreateSession\x12\".mediacore.v1.CreateSessionRequest\x1a#.mediacore.v1.CreateSessionResponse\x12X\n" +
 	"\rUpdateSession\x12\".mediacore.v1.UpdateSessionRequest\x1a#.mediacore.v1.UpdateSessionResponse\x12a\n" +
-	"\x10TerminateSession\x12%.mediacore.v1.TerminateSessionRequest\x1a&.mediacore.v1.TerminateSessionResponseB@Z>github.com/hywgb/pjSipKF/proto/gen/go/mediacore/v1;mediacorev1b\x06proto3"
+	"\x10TerminateSession\x12%.mediacore.v1.TerminateSessionRequest\x1a&.mediacore.v1.TerminateSessionResponseB9Z7github.com/hywgb/pjSipKF/proto/mediacore/v1;mediacorev1b\x06proto3"
 
 var (
 	file_mediacore_session_proto_rawDescOnce sync.Once

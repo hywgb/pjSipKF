@@ -1,0 +1,1 @@
+This directory contains generated Go code. Import path is `github.com/hywgb/pjSipKF/proto/mediacore/v1` as set in option go_package.
