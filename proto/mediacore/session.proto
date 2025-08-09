@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package mediacore.v1;
+
+option go_package = "github.com/hywgb/pjSipKF/proto/gen/go/mediacore/v1;mediacorev1";
+
+service MediaCore {
+  rpc CreateSession (CreateSessionRequest) returns (CreateSessionResponse);
+  rpc UpdateSession (UpdateSessionRequest) returns (UpdateSessionResponse);
+  rpc TerminateSession (TerminateSessionRequest) returns (TerminateSessionResponse);
+}
+
+message CreateSessionRequest {
+  string sdp_offer = 1;
+  map<string, string> metadata = 2;
+}
+
+message CreateSessionResponse {
+  string session_id = 1;
+  string sdp_answer = 2;
+}
+
+message UpdateSessionRequest {
+  string session_id = 1;
+  string sdp_offer = 2;
+}
+
+message UpdateSessionResponse {
+  string sdp_answer = 1;
+}
+
+message TerminateSessionRequest {
+  string session_id = 1;
+}
+
+message TerminateSessionResponse {
+  bool ok = 1;
+}
