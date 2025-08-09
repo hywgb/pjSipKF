@@ -6,6 +6,7 @@ import (
 	"context"
 	"fmt"
 	"net"
+	"strings"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
@@ -22,19 +23,23 @@ func NewStubClient() Client {
 	panic("build with -tags mediacore_grpc and use NewGRPCClient")
 }
 
-func NewGRPCClientUDS(udsPath string) (Client, error) {
-	dialer := func(ctx context.Context, addr string) (net.Conn, error) {
-		return net.Dial("unix", addr)
+func normalizeUnixTarget(p string) string {
+	if strings.HasPrefix(p, "unix:") {
+		return p
 	}
-	conn, err := grpc.Dial(
-		udsPath,
-		grpc.WithTransportCredentials(insecure.NewCredentials()),
-		grpc.WithContextDialer(dialer),
-	)
+	if strings.HasPrefix(p, "/") {
+		return "unix://" + p
+	}
+	return "unix://" + "/" + p
+}
+
+func NewGRPCClientUDS(udsPath string) (Client, error) {
+	target := normalizeUnixTarget(udsPath)
+	cc, err := grpc.Dial(target, grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		return nil, err
 	}
-	return &grpcClient{cli: mediacorev1.NewMediaCoreClient(conn)}, nil
+	return &grpcClient{cli: mediacorev1.NewMediaCoreClient(cc)}, nil
 }
 
 // For tests without filesystem UDS

@@ -20,11 +20,15 @@ type apiServer struct {
 }
 
 func RegisterRoutes(r *chi.Mux, logger *zap.Logger, cfg config.Config) {
+	mc, err := mediacore.NewClientFromConfig(cfg)
+	if err != nil {
+		logger.Fatal("failed to init mediacore client", zap.Error(err), zap.String("uds", cfg.MediaCoreUDS))
+	}
 	server := &apiServer{
-		logger: logger,
-		cfg:    cfg,
-		reg:    registrar.NewInMemory(),
-		mcClient: func() mediacore.Client { c, _ := mediacore.NewClientFromConfig(cfg); return c }(),
+		logger:   logger,
+		cfg:      cfg,
+		reg:      registrar.NewInMemory(),
+		mcClient: mc,
 	}
 
 	r.Get("/healthz", func(w http.ResponseWriter, _ *http.Request) {
@@ -108,7 +112,8 @@ func (s *apiServer) handleCreateSession(w http.ResponseWriter, r *http.Request) 
 	}
 	id, answer, err := s.mcClient.CreateSession(r.Context(), req.SDPOffer, req.Meta)
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		s.logger.Error("CreateSession failed", zap.Error(err))
+		http.Error(w, "internal error", http.StatusInternalServerError)
 		return
 	}
 	w.Header().Set("Content-Type", "application/json")
