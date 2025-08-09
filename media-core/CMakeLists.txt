@@ -4,7 +4,16 @@ project(media_core LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(media_core src/main.cpp)
+find_package(Protobuf REQUIRED)
+find_package(gRPC REQUIRED)
 
-# TODO: add gRPC/protobuf, pjsip, pjnath, libsrtp dependencies
-# target_link_libraries(media_core PRIVATE ...)
+add_executable(media_core
+    src/main.cpp
+    src/grpc_server.cpp
+    ../proto/gen/cpp/mediacore/session.pb.cc
+    ../proto/gen/cpp/mediacore/session.grpc.pb.cc
+)
+
+target_include_directories(media_core PRIVATE ../proto/gen/cpp)
+
+target_link_libraries(media_core PRIVATE gRPC::grpc++ protobuf::libprotobuf)

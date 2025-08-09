@@ -15,7 +15,7 @@ func Load() Config {
 	cfg := Config{
 		HTTPListen:  ":8080",
 		LogLevel:    "info",
-		MediaCoreUDS: "/var/run/mediacore.sock",
+		MediaCoreUDS: "/tmp/mediacore.sock",
 	}
 	if v := os.Getenv("HTTP_LISTEN"); v != "" {
 		cfg.HTTPListen = v
