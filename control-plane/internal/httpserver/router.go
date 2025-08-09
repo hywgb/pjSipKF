@@ -6,6 +6,7 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	"go.uber.org/zap"
+	"google.golang.org/grpc/status"
 
 	"github.com/hywgb/pjSipKF/control-plane/internal/config"
 	"github.com/hywgb/pjSipKF/control-plane/internal/mediacore"
@@ -112,7 +113,8 @@ func (s *apiServer) handleCreateSession(w http.ResponseWriter, r *http.Request) 
 	}
 	id, answer, err := s.mcClient.CreateSession(r.Context(), req.SDPOffer, req.Meta)
 	if err != nil {
-		s.logger.Error("CreateSession failed", zap.Error(err))
+		st, _ := status.FromError(err)
+		s.logger.Error("CreateSession failed", zap.Error(err), zap.String("grpc_code", st.Code().String()), zap.String("grpc_msg", st.Message()))
 		http.Error(w, "internal error", http.StatusInternalServerError)
 		return
 	}

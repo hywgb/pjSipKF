@@ -13,7 +13,7 @@ type Config struct {
 
 func Load() Config {
 	cfg := Config{
-		HTTPListen:  ":8080",
+		HTTPListen:  ":8085",
 		LogLevel:    "info",
 		MediaCoreUDS: "/tmp/mediacore.sock",
 	}

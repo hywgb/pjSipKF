@@ -603,6 +603,36 @@ CMakeFiles/media_core.dir/src/grpc_server.cpp.o: /workspace/media-core/src/grpc_
   /workspace/proto/gen/cpp/mediacore/session.pb.h
 
 CMakeFiles/media_core.dir/src/main.cpp.o: /workspace/media-core/src/main.cpp \
+  /usr/include/absl/base/attributes.h \
+  /usr/include/absl/base/config.h \
+  /usr/include/absl/base/const_init.h \
+  /usr/include/absl/base/internal/atomic_hook.h \
+  /usr/include/absl/base/internal/identity.h \
+  /usr/include/absl/base/internal/low_level_alloc.h \
+  /usr/include/absl/base/internal/per_thread_tls.h \
+  /usr/include/absl/base/internal/raw_logging.h \
+  /usr/include/absl/base/internal/thread_annotations.h \
+  /usr/include/absl/base/internal/thread_identity.h \
+  /usr/include/absl/base/internal/throw_delegate.h \
+  /usr/include/absl/base/internal/tsan_mutex_interface.h \
+  /usr/include/absl/base/log_severity.h \
+  /usr/include/absl/base/macros.h \
+  /usr/include/absl/base/optimization.h \
+  /usr/include/absl/base/options.h \
+  /usr/include/absl/base/policy_checks.h \
+  /usr/include/absl/base/port.h \
+  /usr/include/absl/base/thread_annotations.h \
+  /usr/include/absl/strings/string_view.h \
+  /usr/include/absl/synchronization/internal/create_thread_identity.h \
+  /usr/include/absl/synchronization/internal/kernel_timeout.h \
+  /usr/include/absl/synchronization/internal/per_thread_sem.h \
+  /usr/include/absl/synchronization/mutex.h \
+  /usr/include/absl/time/civil_time.h \
+  /usr/include/absl/time/clock.h \
+  /usr/include/absl/time/internal/cctz/include/cctz/civil_time.h \
+  /usr/include/absl/time/internal/cctz/include/cctz/civil_time_detail.h \
+  /usr/include/absl/time/internal/cctz/include/cctz/time_zone.h \
+  /usr/include/absl/time/time.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -610,11 +640,113 @@ CMakeFiles/media_core.dir/src/main.cpp.o: /workspace/media-core/src/main.cpp \
   /usr/include/asm-generic/int-ll64.h \
   /usr/include/asm-generic/posix_types.h \
   /usr/include/asm-generic/types.h \
+  /usr/include/assert.h \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
+  /usr/include/grpc/byte_buffer.h \
+  /usr/include/grpc/compression.h \
+  /usr/include/grpc/grpc.h \
+  /usr/include/grpc/grpc_security.h \
+  /usr/include/grpc/grpc_security_constants.h \
+  /usr/include/grpc/impl/codegen/atm.h \
+  /usr/include/grpc/impl/codegen/atm_gcc_atomic.h \
+  /usr/include/grpc/impl/codegen/byte_buffer.h \
+  /usr/include/grpc/impl/codegen/byte_buffer_reader.h \
+  /usr/include/grpc/impl/codegen/compression_types.h \
+  /usr/include/grpc/impl/codegen/connectivity_state.h \
+  /usr/include/grpc/impl/codegen/gpr_slice.h \
+  /usr/include/grpc/impl/codegen/gpr_types.h \
+  /usr/include/grpc/impl/codegen/grpc_types.h \
+  /usr/include/grpc/impl/codegen/log.h \
+  /usr/include/grpc/impl/codegen/port_platform.h \
+  /usr/include/grpc/impl/codegen/propagation_bits.h \
+  /usr/include/grpc/impl/codegen/slice.h \
+  /usr/include/grpc/impl/codegen/status.h \
+  /usr/include/grpc/impl/codegen/sync.h \
+  /usr/include/grpc/impl/codegen/sync_abseil.h \
+  /usr/include/grpc/impl/codegen/sync_generic.h \
+  /usr/include/grpc/slice.h \
+  /usr/include/grpc/slice_buffer.h \
+  /usr/include/grpc/status.h \
+  /usr/include/grpc/support/atm.h \
+  /usr/include/grpc/support/cpu.h \
+  /usr/include/grpc/support/log.h \
+  /usr/include/grpc/support/port_platform.h \
+  /usr/include/grpc/support/sync.h \
+  /usr/include/grpc/support/time.h \
+  /usr/include/grpc/support/workaround_list.h \
+  /usr/include/grpcpp/channel.h \
+  /usr/include/grpcpp/client_context.h \
+  /usr/include/grpcpp/completion_queue.h \
+  /usr/include/grpcpp/create_channel.h \
+  /usr/include/grpcpp/create_channel_posix.h \
+  /usr/include/grpcpp/grpcpp.h \
+  /usr/include/grpcpp/health_check_service_interface.h \
+  /usr/include/grpcpp/impl/call.h \
+  /usr/include/grpcpp/impl/call_hook.h \
+  /usr/include/grpcpp/impl/call_op_set.h \
+  /usr/include/grpcpp/impl/call_op_set_interface.h \
+  /usr/include/grpcpp/impl/channel_argument_option.h \
+  /usr/include/grpcpp/impl/channel_interface.h \
+  /usr/include/grpcpp/impl/codegen/call.h \
+  /usr/include/grpcpp/impl/codegen/call_hook.h \
+  /usr/include/grpcpp/impl/codegen/channel_interface.h \
+  /usr/include/grpcpp/impl/codegen/client_interceptor.h \
+  /usr/include/grpcpp/impl/codegen/completion_queue_tag.h \
+  /usr/include/grpcpp/impl/codegen/config.h \
+  /usr/include/grpcpp/impl/codegen/core_codegen.h \
+  /usr/include/grpcpp/impl/codegen/core_codegen_interface.h \
+  /usr/include/grpcpp/impl/codegen/create_auth_context.h \
+  /usr/include/grpcpp/impl/codegen/grpc_library.h \
+  /usr/include/grpcpp/impl/codegen/intercepted_channel.h \
+  /usr/include/grpcpp/impl/codegen/interceptor_common.h \
+  /usr/include/grpcpp/impl/codegen/metadata_map.h \
+  /usr/include/grpcpp/impl/codegen/rpc_service_method.h \
+  /usr/include/grpcpp/impl/codegen/security/auth_context.h \
+  /usr/include/grpcpp/impl/codegen/server_context.h \
+  /usr/include/grpcpp/impl/codegen/server_interceptor.h \
+  /usr/include/grpcpp/impl/codegen/server_interface.h \
+  /usr/include/grpcpp/impl/codegen/slice.h \
+  /usr/include/grpcpp/impl/codegen/status.h \
+  /usr/include/grpcpp/impl/codegen/status_code_enum.h \
+  /usr/include/grpcpp/impl/codegen/sync.h \
+  /usr/include/grpcpp/impl/grpc_library.h \
+  /usr/include/grpcpp/impl/rpc_method.h \
+  /usr/include/grpcpp/impl/rpc_service_method.h \
+  /usr/include/grpcpp/impl/serialization_traits.h \
+  /usr/include/grpcpp/impl/server_builder_option.h \
+  /usr/include/grpcpp/impl/server_builder_plugin.h \
+  /usr/include/grpcpp/resource_quota.h \
+  /usr/include/grpcpp/security/auth_context.h \
+  /usr/include/grpcpp/security/auth_metadata_processor.h \
+  /usr/include/grpcpp/security/authorization_policy_provider.h \
+  /usr/include/grpcpp/security/credentials.h \
+  /usr/include/grpcpp/security/server_credentials.h \
+  /usr/include/grpcpp/security/tls_certificate_provider.h \
+  /usr/include/grpcpp/security/tls_certificate_verifier.h \
+  /usr/include/grpcpp/security/tls_credentials_options.h \
+  /usr/include/grpcpp/server.h \
+  /usr/include/grpcpp/server_builder.h \
+  /usr/include/grpcpp/server_context.h \
+  /usr/include/grpcpp/server_posix.h \
+  /usr/include/grpcpp/support/byte_buffer.h \
+  /usr/include/grpcpp/support/callback_common.h \
+  /usr/include/grpcpp/support/channel_arguments.h \
+  /usr/include/grpcpp/support/client_interceptor.h \
+  /usr/include/grpcpp/support/config.h \
+  /usr/include/grpcpp/support/interceptor.h \
+  /usr/include/grpcpp/support/message_allocator.h \
+  /usr/include/grpcpp/support/server_callback.h \
+  /usr/include/grpcpp/support/server_interceptor.h \
+  /usr/include/grpcpp/support/slice.h \
+  /usr/include/grpcpp/support/status.h \
+  /usr/include/grpcpp/support/string_ref.h \
+  /usr/include/grpcpp/support/time.h \
+  /usr/include/grpcpp/version_info.h \
+  /usr/include/libintl.h \
   /usr/include/limits.h \
   /usr/include/linux/close_range.h \
   /usr/include/linux/errno.h \
@@ -623,13 +755,17 @@ CMakeFiles/media_core.dir/src/main.cpp.o: /workspace/media-core/src/main.cpp \
   /usr/include/linux/sched/types.h \
   /usr/include/linux/stddef.h \
   /usr/include/linux/types.h \
+  /usr/include/linux/version.h \
   /usr/include/locale.h \
+  /usr/include/math.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/syscall.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
@@ -652,12 +788,22 @@ CMakeFiles/media_core.dir/src/main.cpp.o: /workspace/media-core/src/main.cpp \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
   /usr/include/x86_64-linux-gnu/bits/local_lim.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-macros.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
@@ -721,10 +867,15 @@ CMakeFiles/media_core.dir/src/main.cpp.o: /workspace/media-core/src/main.cpp \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/x86_64-linux-gnu/sys/syscall.h \
+  /usr/include/x86_64-linux-gnu/sys/time.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/c++/14/algorithm \
+  /usr/include/c++/14/array \
+  /usr/include/c++/14/atomic \
   /usr/include/c++/14/backward/auto_ptr.h \
   /usr/include/c++/14/backward/binders.h \
   /usr/include/c++/14/bit \
+  /usr/include/c++/14/bits/algorithmfwd.h \
   /usr/include/c++/14/bits/align.h \
   /usr/include/c++/14/bits/alloc_traits.h \
   /usr/include/c++/14/bits/allocated_ptr.h \
@@ -738,24 +889,35 @@ CMakeFiles/media_core.dir/src/main.cpp.o: /workspace/media-core/src/main.cpp \
   /usr/include/c++/14/bits/basic_string.tcc \
   /usr/include/c++/14/bits/char_traits.h \
   /usr/include/c++/14/bits/charconv.h \
+  /usr/include/c++/14/bits/chrono.h \
+  /usr/include/c++/14/bits/chrono_io.h \
+  /usr/include/c++/14/bits/codecvt.h \
   /usr/include/c++/14/bits/concept_check.h \
   /usr/include/c++/14/bits/cpp_type_traits.h \
   /usr/include/c++/14/bits/cxxabi_forced.h \
   /usr/include/c++/14/bits/cxxabi_init_exception.h \
+  /usr/include/c++/14/bits/enable_special_members.h \
+  /usr/include/c++/14/bits/erase_if.h \
   /usr/include/c++/14/bits/exception.h \
   /usr/include/c++/14/bits/exception_defines.h \
   /usr/include/c++/14/bits/exception_ptr.h \
   /usr/include/c++/14/bits/functexcept.h \
   /usr/include/c++/14/bits/functional_hash.h \
   /usr/include/c++/14/bits/hash_bytes.h \
+  /usr/include/c++/14/bits/hashtable.h \
+  /usr/include/c++/14/bits/hashtable_policy.h \
   /usr/include/c++/14/bits/invoke.h \
   /usr/include/c++/14/bits/ios_base.h \
   /usr/include/c++/14/bits/istream.tcc \
   /usr/include/c++/14/bits/iterator_concepts.h \
+  /usr/include/c++/14/bits/list.tcc \
   /usr/include/c++/14/bits/locale_classes.h \
   /usr/include/c++/14/bits/locale_classes.tcc \
+  /usr/include/c++/14/bits/locale_conv.h \
   /usr/include/c++/14/bits/locale_facets.h \
   /usr/include/c++/14/bits/locale_facets.tcc \
+  /usr/include/c++/14/bits/locale_facets_nonio.h \
+  /usr/include/c++/14/bits/locale_facets_nonio.tcc \
   /usr/include/c++/14/bits/localefwd.h \
   /usr/include/c++/14/bits/max_size_type.h \
   /usr/include/c++/14/bits/memory_resource.h \
@@ -763,12 +925,16 @@ CMakeFiles/media_core.dir/src/main.cpp.o: /workspace/media-core/src/main.cpp \
   /usr/include/c++/14/bits/move.h \
   /usr/include/c++/14/bits/nested_exception.h \
   /usr/include/c++/14/bits/new_allocator.h \
+  /usr/include/c++/14/bits/node_handle.h \
   /usr/include/c++/14/bits/ostream.tcc \
   /usr/include/c++/14/bits/ostream_insert.h \
+  /usr/include/c++/14/bits/parse_numbers.h \
   /usr/include/c++/14/bits/postypes.h \
   /usr/include/c++/14/bits/predefined_ops.h \
   /usr/include/c++/14/bits/ptr_traits.h \
+  /usr/include/c++/14/bits/quoted_string.h \
   /usr/include/c++/14/bits/range_access.h \
+  /usr/include/c++/14/bits/ranges_algo.h \
   /usr/include/c++/14/bits/ranges_algobase.h \
   /usr/include/c++/14/bits/ranges_base.h \
   /usr/include/c++/14/bits/ranges_cmp.h \
@@ -779,37 +945,62 @@ CMakeFiles/media_core.dir/src/main.cpp.o: /workspace/media-core/src/main.cpp \
   /usr/include/c++/14/bits/shared_ptr.h \
   /usr/include/c++/14/bits/shared_ptr_atomic.h \
   /usr/include/c++/14/bits/shared_ptr_base.h \
+  /usr/include/c++/14/bits/specfun.h \
+  /usr/include/c++/14/bits/sstream.tcc \
   /usr/include/c++/14/bits/std_abs.h \
+  /usr/include/c++/14/bits/std_function.h \
   /usr/include/c++/14/bits/std_mutex.h \
+  /usr/include/c++/14/bits/stl_algo.h \
   /usr/include/c++/14/bits/stl_algobase.h \
+  /usr/include/c++/14/bits/stl_bvector.h \
   /usr/include/c++/14/bits/stl_construct.h \
   /usr/include/c++/14/bits/stl_function.h \
+  /usr/include/c++/14/bits/stl_heap.h \
   /usr/include/c++/14/bits/stl_iterator.h \
   /usr/include/c++/14/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/14/bits/stl_iterator_base_types.h \
+  /usr/include/c++/14/bits/stl_list.h \
+  /usr/include/c++/14/bits/stl_map.h \
+  /usr/include/c++/14/bits/stl_multimap.h \
   /usr/include/c++/14/bits/stl_pair.h \
   /usr/include/c++/14/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/14/bits/stl_relops.h \
   /usr/include/c++/14/bits/stl_tempbuf.h \
+  /usr/include/c++/14/bits/stl_tree.h \
   /usr/include/c++/14/bits/stl_uninitialized.h \
+  /usr/include/c++/14/bits/stl_vector.h \
+  /usr/include/c++/14/bits/stream_iterator.h \
   /usr/include/c++/14/bits/streambuf.tcc \
   /usr/include/c++/14/bits/streambuf_iterator.h \
   /usr/include/c++/14/bits/string_view.tcc \
   /usr/include/c++/14/bits/stringfwd.h \
+  /usr/include/c++/14/bits/unicode-data.h \
+  /usr/include/c++/14/bits/unicode.h \
+  /usr/include/c++/14/bits/uniform_int_dist.h \
+  /usr/include/c++/14/bits/unique_lock.h \
   /usr/include/c++/14/bits/unique_ptr.h \
+  /usr/include/c++/14/bits/unordered_map.h \
   /usr/include/c++/14/bits/uses_allocator.h \
   /usr/include/c++/14/bits/uses_allocator_args.h \
   /usr/include/c++/14/bits/utility.h \
+  /usr/include/c++/14/bits/vector.tcc \
   /usr/include/c++/14/bits/version.h \
+  /usr/include/c++/14/cassert \
   /usr/include/c++/14/cctype \
   /usr/include/c++/14/cerrno \
+  /usr/include/c++/14/charconv \
+  /usr/include/c++/14/chrono \
   /usr/include/c++/14/climits \
   /usr/include/c++/14/clocale \
+  /usr/include/c++/14/cmath \
   /usr/include/c++/14/compare \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
   /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
+  /usr/include/c++/14/cstring \
+  /usr/include/c++/14/ctime \
   /usr/include/c++/14/cwchar \
   /usr/include/c++/14/cwctype \
   /usr/include/c++/14/debug/assertions.h \
@@ -822,26 +1013,57 @@ CMakeFiles/media_core.dir/src/main.cpp.o: /workspace/media-core/src/main.cpp \
   /usr/include/c++/14/ext/numeric_traits.h \
   /usr/include/c++/14/ext/string_conversions.h \
   /usr/include/c++/14/ext/type_traits.h \
+  /usr/include/c++/14/format \
+  /usr/include/c++/14/functional \
   /usr/include/c++/14/initializer_list \
+  /usr/include/c++/14/iomanip \
   /usr/include/c++/14/ios \
   /usr/include/c++/14/iosfwd \
   /usr/include/c++/14/iostream \
   /usr/include/c++/14/istream \
+  /usr/include/c++/14/iterator \
+  /usr/include/c++/14/limits \
+  /usr/include/c++/14/list \
+  /usr/include/c++/14/locale \
+  /usr/include/c++/14/map \
   /usr/include/c++/14/memory \
+  /usr/include/c++/14/mutex \
   /usr/include/c++/14/new \
   /usr/include/c++/14/numbers \
+  /usr/include/c++/14/optional \
   /usr/include/c++/14/ostream \
   /usr/include/c++/14/pstl/execution_defs.h \
+  /usr/include/c++/14/pstl/glue_algorithm_defs.h \
   /usr/include/c++/14/pstl/glue_memory_defs.h \
   /usr/include/c++/14/pstl/pstl_config.h \
+  /usr/include/c++/14/ratio \
+  /usr/include/c++/14/span \
+  /usr/include/c++/14/sstream \
   /usr/include/c++/14/stdexcept \
+  /usr/include/c++/14/stdlib.h \
   /usr/include/c++/14/streambuf \
   /usr/include/c++/14/string \
   /usr/include/c++/14/string_view \
   /usr/include/c++/14/system_error \
+  /usr/include/c++/14/tr1/bessel_function.tcc \
+  /usr/include/c++/14/tr1/beta_function.tcc \
+  /usr/include/c++/14/tr1/ell_integral.tcc \
+  /usr/include/c++/14/tr1/exp_integral.tcc \
+  /usr/include/c++/14/tr1/gamma.tcc \
+  /usr/include/c++/14/tr1/hypergeometric.tcc \
+  /usr/include/c++/14/tr1/legendre_function.tcc \
+  /usr/include/c++/14/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/14/tr1/poly_hermite.tcc \
+  /usr/include/c++/14/tr1/poly_laguerre.tcc \
+  /usr/include/c++/14/tr1/riemann_zeta.tcc \
+  /usr/include/c++/14/tr1/special_function_util.h \
   /usr/include/c++/14/tuple \
   /usr/include/c++/14/type_traits \
   /usr/include/c++/14/typeinfo \
+  /usr/include/c++/14/unordered_map \
+  /usr/include/c++/14/utility \
+  /usr/include/c++/14/variant \
+  /usr/include/c++/14/vector \
   /usr/include/x86_64-linux-gnu/c++/14/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h \
@@ -852,8 +1074,15 @@ CMakeFiles/media_core.dir/src/main.cpp.o: /workspace/media-core/src/main.cpp \
   /usr/include/x86_64-linux-gnu/c++/14/bits/error_constants.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/gthr-default.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/messages_members.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/time_members.h \
   /usr/lib/llvm-20/lib/clang/20/include/__stdarg___gnuc_va_list.h \
+  /usr/lib/llvm-20/lib/clang/20/include/__stdarg___va_copy.h \
+  /usr/lib/llvm-20/lib/clang/20/include/__stdarg_header_macro.h \
+  /usr/lib/llvm-20/lib/clang/20/include/__stdarg_va_arg.h \
+  /usr/lib/llvm-20/lib/clang/20/include/__stdarg_va_copy.h \
+  /usr/lib/llvm-20/lib/clang/20/include/__stdarg_va_list.h \
   /usr/lib/llvm-20/lib/clang/20/include/__stddef_header_macro.h \
   /usr/lib/llvm-20/lib/clang/20/include/__stddef_max_align_t.h \
   /usr/lib/llvm-20/lib/clang/20/include/__stddef_null.h \

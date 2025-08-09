@@ -23,7 +23,10 @@ func NewStubClient() Client {
 	panic("build with -tags mediacore_grpc and use NewGRPCClient")
 }
 
-func normalizeUnixTarget(p string) string {
+func buildTarget(p string) string {
+	if strings.HasPrefix(p, "tcp://") {
+		return strings.TrimPrefix(p, "tcp://")
+	}
 	if strings.HasPrefix(p, "unix:") {
 		return p
 	}
@@ -35,8 +38,8 @@ func normalizeUnixTarget(p string) string {
 	return "unix:///" + strings.TrimPrefix(path, "/")
 }
 
-func NewGRPCClientUDS(udsPath string) (Client, error) {
-	target := normalizeUnixTarget(udsPath)
+func NewGRPCClientUDS(udsOrTcp string) (Client, error) {
+	target := buildTarget(udsOrTcp)
 	cc, err := grpc.Dial(target, grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		return nil, err
