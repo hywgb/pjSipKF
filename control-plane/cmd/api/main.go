@@ -23,6 +23,7 @@ func main() {
 	defer logger.Sync()
 
 	router := chi.NewRouter()
+	router.Use(httpserver.WithMiddlewares(logger))
 	router.Handle("/metrics", promhttp.Handler())
 	// Register business routes
 	httpserver.RegisterRoutes(router, logger, cfg)
