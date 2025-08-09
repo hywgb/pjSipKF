@@ -27,10 +27,12 @@ func normalizeUnixTarget(p string) string {
 	if strings.HasPrefix(p, "unix:") {
 		return p
 	}
-	if strings.HasPrefix(p, "/") {
-		return "unix://" + p
+	// ensure absolute path and unix:/// prefix
+	path := p
+	if !strings.HasPrefix(path, "/") {
+		path = "/" + path
 	}
-	return "unix://" + "/" + p
+	return "unix:///" + strings.TrimPrefix(path, "/")
 }
 
 func NewGRPCClientUDS(udsPath string) (Client, error) {
