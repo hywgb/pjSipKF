@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: app
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  app:
+    build: .
+    environment:
+      APP_DATABASE_URL: postgresql+asyncpg://postgres:postgres@db:5432/app
+      APP_RUN_MIGRATIONS: "true"
+      APP_LOG_LEVEL: INFO
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    volumes:
+      - ./:/app
+volumes:
+  dbdata: {}
